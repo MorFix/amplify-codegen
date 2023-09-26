@@ -706,10 +706,13 @@ export class AppSyncModelVisitor<
   }
 
   protected generateIntermediateModel(firstModel: CodeGenModel, secondModel: CodeGenModel, relationName: string) {
+    const firstModelKeyField = this.getModelPrimaryKeyField(firstModel);
     const firstModelKeyFieldName = this.generateIntermediateModelPrimaryKeyFieldName(firstModel);
     const firstModelSortKeyFields: CodeGenField[] = this.getSortKeyFields(firstModel);
+    const secondModelKeyField = this.getModelPrimaryKeyField(secondModel);
     const secondModelKeyFieldName = this.generateIntermediateModelPrimaryKeyFieldName(secondModel);
     const secondModelSortKeyFields: CodeGenField[] = this.getSortKeyFields(secondModel);
+    const customPrimaryKeyEnabled = this.isCustomPKEnabled();
 
     let intermediateModel: CodeGenModel = {
       name: relationName,
@@ -725,7 +728,7 @@ export class AppSyncModelVisitor<
         },
         {
           type: 'ID',
-          isNullable: true,
+          isNullable: customPrimaryKeyEnabled ? firstModelKeyField.isNullable : false,
           isList: false,
           name: firstModelKeyFieldName,
           directives: [
@@ -749,7 +752,7 @@ export class AppSyncModelVisitor<
         }),
         {
           type: 'ID',
-          isNullable: true,
+          isNullable: customPrimaryKeyEnabled ? secondModelKeyField.isNullable : false,
           isList: false,
           name: secondModelKeyFieldName,
           directives: [
