@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs-extra');
 const globby = require('globby');
 const { FeatureFlags, pathManager } = require('@aws-amplify/amplify-cli-core');
-const { generateModels: generateModelsHelper } = require('@aws-amplify/graphql-generator');
+const { generateModels: generateModelsHelper } = require('amp-graphql-generator');
 const { DefaultDirectives } = require('@aws-amplify/graphql-directives');
 const { validateAmplifyFlutterMinSupportedVersion } = require('../utils/validateAmplifyFlutterMinSupportedVersion');
 const getProjectRoot = require('../utils/getProjectRoot');
@@ -281,7 +281,7 @@ async function generateModels(context, generateOptions = null) {
       fs.outputFileSync(path.resolve(path.join(outputDir, filepath)), contents);
     });
 
-    // TODO: move to @aws-amplify/graphql-generator
+    // TODO: move to amp-graphql-generator
     generateEslintIgnore(context);
 
     context.print.info(`Successfully generated models. Generated models can be found in ${outputDir}`);

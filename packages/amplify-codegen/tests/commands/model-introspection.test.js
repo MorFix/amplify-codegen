@@ -1,12 +1,12 @@
 const { generateModelIntrospection, getModelIntrospection } = require('../../src/commands/model-intropection');
-const graphqlGenerator = require('@aws-amplify/graphql-generator');
+const graphqlGenerator = require('amp-graphql-generator');
 const codegen_core = require('@graphql-codegen/core');
 const mockFs = require('mock-fs');
 const path = require('path');
 const fs = require('fs');
 
-jest.mock('@aws-amplify/graphql-generator', () => {
-  const originalModule = jest.requireActual('@aws-amplify/graphql-generator');
+jest.mock('amp-graphql-generator', () => {
+  const originalModule = jest.requireActual('amp-graphql-generator');
   return {
     ...originalModule,
     generateModels: jest.fn(),

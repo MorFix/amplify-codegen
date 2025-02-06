@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Profiler } from '@graphql-codegen/plugin-helpers';
-import { SyncTypes as Types } from '@aws-amplify/appsync-modelgen-plugin';
+import { SyncTypes as Types } from 'amp-appsync-modelgen-plugin';
 import { DocumentNode, GraphQLSchema, buildASTSchema } from 'graphql';
 import { createNoopProfiler } from '../../../profiler'
 export interface ExecutePluginOptions {

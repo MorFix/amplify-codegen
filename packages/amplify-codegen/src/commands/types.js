@@ -7,7 +7,7 @@ const { Source } = require('graphql');
 const constants = require('../constants');
 const { loadConfig } = require('../codegen-config');
 const { ensureIntrospectionSchema, getFrontEndHandler, getAppSyncAPIDetails, getAppSyncAPIInfoFromProject } = require('../utils');
-const { generateTypes: generateTypesHelper } = require('@aws-amplify/graphql-generator');
+const { generateTypes: generateTypesHelper } = require('amp-graphql-generator');
 const { extractDocumentFromJavascript } = require('@aws-amplify/graphql-types-generator');
 const { normalizePathForGlobPattern } = require('../utils/input-params-manager');
 

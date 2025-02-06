@@ -1,6 +1,6 @@
 import * as path from 'path';
 import { parse } from 'graphql';
-import * as appSyncDataStoreCodeGen from '@aws-amplify/appsync-modelgen-plugin';
+import * as appSyncDataStoreCodeGen from 'amp-appsync-modelgen-plugin';
 import { DefaultDirectives } from '@aws-amplify/graphql-directives';
 import { codegen } from '@graphql-codegen/core';
 import { codegen as codegenSync } from './vendor/@graphql-codegen/core'

@@ -1,6 +1,6 @@
 {
-  "name": "amplify-codegen",
-  "version": "4.10.2",
+  "name": "amplify-codegen-amp",
+  "version": "4.10.5",
   "description": "Amplify Code Generator",
   "repository": {
     "type": "git",
@@ -23,9 +23,9 @@
   "dependencies": {
     "@aws-amplify/graphql-directives": "^1.0.1",
     "@aws-amplify/graphql-docs-generator": "4.2.1",
-    "@aws-amplify/graphql-generator": "0.5.2",
     "@aws-amplify/graphql-types-generator": "3.6.0",
     "@graphql-codegen/core": "^2.6.6",
+    "amp-graphql-generator": "0.5.5",
     "chalk": "^3.0.0",
     "fs-extra": "^8.1.0",
     "glob-parent": "^6.0.2",

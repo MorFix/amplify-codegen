@@ -13,7 +13,7 @@ const {
   getRelativeTypesPath,
 } = require('../utils');
 const { generateGraphQLDocuments } = require('@aws-amplify/graphql-docs-generator');
-const { generateStatements: generateStatementsHelper } = require('@aws-amplify/graphql-generator');
+const { generateStatements: generateStatementsHelper } = require('amp-graphql-generator');
 
 async function generateStatements(context, forceDownloadSchema, maxDepth, withoutInit = false, decoupleFrontend = '') {
   try {
