@@ -8,7 +8,7 @@ import { createNoopProfiler } from '../../../profiler'
 import { visit, DefinitionNode, Kind, print, NameNode, specifiedRules, DocumentNode } from 'graphql';
 import { executePlugin } from './execute-plugin';
 import { validateGraphQlDocuments, Source, asArray } from '@graphql-tools/utils';
-import { SyncTypes as Types } from '@aws-amplify/appsync-modelgen-plugin';
+import { SyncTypes as Types } from 'amp-appsync-modelgen-plugin';
 import { mergeSchemas } from '@graphql-tools/schema';
 import {
   extractHashFromSchema,

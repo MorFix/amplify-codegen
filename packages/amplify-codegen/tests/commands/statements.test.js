@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 
 const { loadConfig } = require('../../src/codegen-config');
 const generateStatements = require('../../src/commands/statements');
-const { generateStatements: generateStatementsHelper } = require('@aws-amplify/graphql-generator');
+const { generateStatements: generateStatementsHelper } = require('amp-graphql-generator');
 const constants = require('../../src/constants');
 const {
   ensureIntrospectionSchema,
@@ -23,7 +23,7 @@ const MOCK_CONTEXT = {
   },
 };
 
-jest.mock('@aws-amplify/graphql-generator');
+jest.mock('amp-graphql-generator');
 jest.mock('../../src/codegen-config');
 jest.mock('../../src/utils');
 jest.mock('fs-extra');

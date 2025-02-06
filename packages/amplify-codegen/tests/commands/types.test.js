@@ -1,6 +1,6 @@
 const globby = require('globby');
 const path = require('path');
-const { generateTypes: generateTypesHelper } = require('@aws-amplify/graphql-generator');
+const { generateTypes: generateTypesHelper } = require('amp-graphql-generator');
 const fs = require('fs-extra');
 const { Source } = require('graphql');
 
@@ -21,7 +21,7 @@ const MOCK_CONTEXT = {
 };
 
 jest.mock('globby');
-jest.mock('@aws-amplify/graphql-generator');
+jest.mock('amp-graphql-generator');
 jest.mock('@aws-amplify/graphql-types-generator');
 jest.mock('../../src/codegen-config');
 jest.mock('../../src/utils');
