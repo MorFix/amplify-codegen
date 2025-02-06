@@ -1,5 +1,5 @@
 {
-  "name": "@aws-amplify/appsync-modelgen-plugin",
+  "name": "amp-appsync-modelgen-plugin",
   "version": "2.15.2",
   "repository": {
     "type": "git",
